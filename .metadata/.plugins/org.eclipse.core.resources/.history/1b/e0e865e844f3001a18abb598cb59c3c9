@@ -1,0 +1,28 @@
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver; 
+
+public class Login {
+
+	public static void main(String[] args) throws InterruptedException {
+		// TODO Auto-generated method stub
+		
+		System.setProperty("webdriver.chrome.driver","C:\\Users\\satish.kumar\\chromedriver.exe");
+		WebDriver driver= new ChromeDriver();
+		driver.get("https://bcv.social/login");
+		driver.findElement(By.id("E-mail")).sendKeys("satish.kumar@rategain.com");
+		driver.findElement(By.id("Password")).sendKeys("Changeme@123");
+		//driver.findElement(By.xpath("//input[@name='email']")).sendKeys("satish.k2010@yahoo.com");
+		//driver.findElement(By.xpath("//input[@name='pass']")).sendKeys("facebook@123");
+		//driver.findElement(By.name("submit")).click();
+		driver.findElement(By.xpath("//*[@id='app']/div/div[1]/div/div/form/button")).click();
+		Thread.sleep(5000);
+		driver.findElement(By.linkText("Hotel Ramtin")).click();		
+		//driver.findElement(By.xpath("//*[@id='card-panel']/div[1]/div[1]/div/div[1]/div[1]/a")).click();
+		//driver.findElement(By.cssSelector("#email")).sendKeys("satish.kumar");
+		//driver.close();
+		
+	}
+
+}
+
